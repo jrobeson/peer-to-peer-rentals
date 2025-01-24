@@ -1,7 +1,9 @@
 export interface RentalPeriod {
-	startDate: string; // or Date, but we'll store as string for simplicity
+	startDate: string; 
 	endDate: string;
 	id: string;
+	status: 'rented' | 'returned';
+	returnedDate?: string;
 }
 
 export interface Item {
