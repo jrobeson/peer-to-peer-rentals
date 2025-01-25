@@ -237,8 +237,7 @@ A global Express error handler that checks if the thrown error is an instance of
 
 1. **In-Memory Storage**
 
-- Data is stored in the items array rather than a database for simplicity and easy
-- local testing—perfect for demos and interviews.
+- Data is stored in the items array rather than a database for simplicity and ease of local testing.
 
 2. **Layered Approach**
 
@@ -258,6 +257,7 @@ A global Express error handler that checks if the thrown error is an instance of
 
 5. **Return Id and Returned Date**
 
-- A return id and return date are added to each item. This could be used to give a user their rental id for easy look up and rental tracking. Also, a return date could be good for historical data/auditing purposes.
+- A return id and return date are added to each rental period.
+  - This could be used for easy rental period tracking/lookup and rental confirmation for the user. Also, a return date could be useful for historical data/auditing purposes.
 
 > This design is straightforward, testable, and can be extended easily for more advanced logic (e.g., partial/future rentals with date checks).
