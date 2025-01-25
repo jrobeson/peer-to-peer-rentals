@@ -150,15 +150,12 @@ Base URL: `http://localhost:3000/api`
 ```json
 [
 	{
-		"message": "Item added successfully!",
-		"item": {
-			"id": "123456",
-			"name": "Steam powered hairbrush",
-			"description": "An interesting thing to rent",
-			"price": 15,
-			"availability": true,
-			"rentalPeriods": []
-		}
+		"id": "123456",
+		"name": "Steam powered hairbrush",
+		"description": "An interesting thing to rent",
+		"price": 15,
+		"availability": true,
+		"rentalPeriods": []
 	}
 ]
 ```
