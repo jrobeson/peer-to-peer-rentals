@@ -1,6 +1,6 @@
 import express, { type NextFunction, type Response, type Request } from 'express';
 import dotenv from 'dotenv';
-import itemRoutes from './routes/items';
+import itemRoutes from './routes/items.routes';
 import { HttpError } from './utils/error';
 
 dotenv.config();

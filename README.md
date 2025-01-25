@@ -1,8 +1,11 @@
 # Peer-to-Peer Rental Platform Backend
 
-A Node.js/TypeScript API that lets users **list**, **search**, **rent**, and **return** items. Data is stored **in-memory** (no external database). Uses a custom `HttpError` class for HTTP-specific error handling and an organized, layered architecture (services, controllers, routes).
+#### 🚀 A Node.js/TypeScript API is for the renting world! 🚀
 
-> Please note that ONE dummy object has been left in storage or ease of testing.
+This API allows users to **list**, **search**, **rent**, and **return** items - no bulky database required!
+Data is stored **in-memory** (no external database). Uses a custom `HttpError` class for HTTP-specific error handling and an organized, layered architecture (services, controllers, routes).
+
+> Please note that ONE dummy object has been left in storage for ease of testing but can be removed if desired.
 
 ## Table of Contents
 
@@ -23,12 +26,12 @@ A Node.js/TypeScript API that lets users **list**, **search**, **rent**, and **r
 
 ## Features
 
-1. **List an Item**: Create a new item with a name, description, price, and default availability.
+1. **List an Item**: Create a new item with a name, description, price, description, and default availability.
 2. **Search Items**: Retrieve items filtered by `name` and/or `price range`.
-3. **Rent an Item**: Mark an item as rented for a given date range (`availability = false`).
-4. **Return an Item**: Mark an item as returned (`availability = true`).
+3. **Rent an Item**: Mark an item as rented for a given date range (`availability = false`, `status = 'rented'`).
+4. **Return an Item**: Mark an item as returned (`availability = true`, `status = 'returned'`).
 5. **Custom HTTP Error Handling**: Uses a `HttpError` class to provide proper HTTP status codes (like `404`, `400`, `409`, etc.).
-6. **In-Memory Data**: No database required—perfect for quick demos or technical interviews.
+6. **In-Memory Data**: No database required!
 
 ---
 
@@ -61,7 +64,7 @@ peer-to-peer-rental/
 - **`items.service.ts`**: “Service layer” with core logic (search, rent, return). Throws custom HTTP errors.
 - **`items.controller.ts`**: “Controller layer” that handles requests/responses, passing errors to a global handler.
 - **`items.routes.ts`**: Binds URIs (`/items`, `/items/:id/rent`, etc.) to controller functions.
-- **`HttpError.ts`**: A small class that extends `Error` with a `statusCode` property, so HTTP statues can be easily returned.
+- **`error.ts`**: A small class that extends `Error` with a `statusCode` property, so HTTP statues can be easily returned.
 
 ---
 
@@ -227,7 +230,7 @@ Base URL: `http://localhost:3000/api`
 
 ## Error Handling
 
-We use a global Express error handler that checks if the thrown error is an instance of HttpError. If so, we return the associated statusCode and message. Otherwise, we return a generic 500 Internal Server Error.
+A global Express error handler that checks if the thrown error is an instance of HttpError. If so, we return the associated statusCode and message. Otherwise, a generic 500 Internal Server Error is returned.
 
 - Not found (404)
 - Missing fields (400)
@@ -237,7 +240,7 @@ We use a global Express error handler that checks if the thrown error is an inst
 
 1. **In-Memory Storage**
 
-- We store data in the items array rather than a database for simplicity and easy
+- Data is stored in the items array rather than a database for simplicity and easy
 - local testing—perfect for demos and interviews.
 
 2. **Layered Approach**
