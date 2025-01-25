@@ -46,7 +46,7 @@ export class ItemsService {
 			throw new HttpError('Invalid date format.', 400);
 		}
 		if (start > end) {
-			throw new HttpError('startDate cannot be after endDate', 400);
+			throw new HttpError('startDate cannot be after endDate', 409);
 		}
 		const item: Item | undefined = items.find((item) => item.id === id);
 		if (!item) {
