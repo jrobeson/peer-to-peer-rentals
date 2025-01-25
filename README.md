@@ -114,9 +114,9 @@ Base URL: `http://localhost:3000/api`
 
 ```json
 {
-	"id": "abc123",
-	"name": "Cordless Drill",
-	"description": "A powerful cordless drill",
+	"id": "123456",
+	"name": "Steam powered hairbrush",
+	"description": "An interesting thing to rent",
 	"price": 15
 }
 ```
@@ -127,9 +127,9 @@ Base URL: `http://localhost:3000/api`
 {
 	"message": "Item added successfully!",
 	"item": {
-		"id": "abc123",
-		"name": "Cordless Drill",
-		"description": "A powerful cordless drill",
+		"id": "123456",
+		"name": "Steam powered hairbrush",
+		"description": "An interesting thing to rent",
 		"price": 15,
 		"availability": true,
 		"rentalPeriods": []
@@ -139,7 +139,7 @@ Base URL: `http://localhost:3000/api`
 
 ### 2. Search Items
 
-- **Endpoint**: `GET /api/items?name=drill&minPrice=10&maxPrice=20`
+- **Endpoint**: `GET /api/items?name=steam&minPrice=10&maxPrice=20`
 - **Query Params**
 
   - name: parital match on item name
@@ -152,9 +152,9 @@ Base URL: `http://localhost:3000/api`
 	{
 		"message": "Item added successfully!",
 		"item": {
-			"id": "abc123",
-			"name": "Cordless Drill",
-			"description": "A powerful cordless drill",
+			"id": "123456",
+			"name": "Steam powered hairbrush",
+			"description": "An interesting thing to rent",
 			"price": 15,
 			"availability": true,
 			"rentalPeriods": []
@@ -181,9 +181,9 @@ Base URL: `http://localhost:3000/api`
 {
 	"message": "Item rented successfully",
 	"item": {
-		"id": "abc123",
-		"name": "Cordless Drill",
-		"description": "A powerful cordless drill",
+		"id": "123456",
+		"name": "Steam powered hairbrush",
+		"description": "An interesting thing to rent",
 		"price": 15,
 		"availability": false,
 		"rentalPeriods": [
@@ -210,9 +210,9 @@ Base URL: `http://localhost:3000/api`
 {
 	"message": "Item returned successfully",
 	"item": {
-		"id": "abc123",
-		"name": "Cordless Drill",
-		"description": "A powerful cordless drill",
+		"id": "123456",
+		"name": "Steam powered hairbrush",
+		"description": "An interesting thing to rent",
 		"price": 15,
 		"availability": true,
 		"rentalPeriods": [
