@@ -20,5 +20,5 @@ app.use((error: unknown, _r: Request, res: Response, _n: NextFunction) => {
 });
 
 app.listen(port, () => {
-	console.log(`Server is running on http://localhost:${port}`);
+	console.log(`Listening on http://localhost:${port}`);
 });
